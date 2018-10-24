@@ -31,3 +31,15 @@ docker run mmumshad/simple-webapp
 sudo docker inspect <id>
 
 docker run -p 8080:5000 mmumshad/simple-webapp
+
+docker run mmumshad/simple-webapp
+sudo docker inspect <id>
+
+docker run -p 8080:5000 mmumshad/simple-webapp
+
+docker run -e MYSQL_ROOT_PASSWORD=admin -d mysql
+
+docker run --name myadmin -d --link 14ab475e92d0:db -p 8080:80 phpmyadmin/phpmyadmin
+
+docker run --name=mysql -e MYSQL_ROOT_PASSWORD=admin -d mysql
+docker run -d --link mysql:db -p 8080:80 phpmyadmin/phpmyadmin
