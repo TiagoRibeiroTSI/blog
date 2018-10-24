@@ -1,1 +1,33 @@
-#
+#Minicurso Docker 241018
+
+Comados Docker:
+
+docker run ubuntu
+
+docker ps
+
+docker run -d ubuntu sleep 15
+
+docker ps -a
+
+docker stop [Container Id]
+
+docker rm [Container Id]
+
+docker images
+
+docker attach <container id>
+
+docker rmi < image id>
+
+docker exec <container id> cat /etc/*release*
+
+ctrl + p + q   //  sair de um container e deixar em execução
+
+docker run  ubuntu:14.04 cat /etc/*release*
+
+docker run mmumshad/simple-webapp
+
+sudo docker inspect <id>
+
+docker run -p 8080:5000 mmumshad/simple-webapp
