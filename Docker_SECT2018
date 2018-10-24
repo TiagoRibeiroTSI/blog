@@ -45,3 +45,12 @@ docker run --name myadmin -d --link 14ab475e92d0:db -p 8080:80 phpmyadmin/phpmya
 docker run --name=mysql -e MYSQL_ROOT_PASSWORD=admin -d mysql
 
 docker run -d --link mysql:db -p 8080:80 phpmyadmin/phpmyadmin
+
+#app.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
